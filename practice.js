@@ -187,6 +187,16 @@ function reverse(numbers) {
 
 // // // 4) Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
 
+function startsWithA(words) {
+  var aFirst = [];
+  words.forEach(function(word) {
+    if (word.charAt(0).toLowerCase() === "a") {
+      aFirst.push(word);
+    }
+  });
+  return aFirst.length;
+}
+console.log(startsWithA(["alabama", "hear", "zebra", "abrupt", "Alaska"]));
 
 // // // 5) Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
 
