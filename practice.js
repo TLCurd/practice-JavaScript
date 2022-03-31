@@ -173,67 +173,78 @@ function sum(numbers) {
 // }
 // console.log(reverse([1, 2, 3]));
 
-function reverse(numbers) {
-  // var i = -1;
-  var reverseArray = [];
+// function reverse(numbers) {
+//   // var i = -1;
+//   var reverseArray = [];
+//   numbers.forEach(function(number) {
+//     reverseArray.unshift(number);
+//     // i -= 1;
+//   });
+//   return reverseArray;
+// }
+// // console.log(reverse([1, 2, 3]));
+
+// // 4) Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
+
+
+// // 5) Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
+
+// function combine(strings) {
+//   var newString = "";
+//   strings.forEach(function(string) {
+//     newString = `${newString}${string}, `;
+//   });
+//   return newString;
+// }
+// // console.log(combine(["Hello", "Goodbye", "Where"]));
+// // 6) Write a function that takes in an array of numbers and returns the product of all the numbers (each number multiplied by each other).
+
+// function product(numbers) {
+//   var product = 1;
+//   numbers.forEach(function(number) {
+//     product *= number;
+//   });
+//   return product;
+// }
+// // console.log(product([1, 2, 3, 4, 5]));
+
+// // 7) Write a function that takes in an array of numbers and returns the two smallest numbers.
+// // order the array of numbers
+// // return the first two numbers!
+
+// function smallestTwo(numbers) {
+//   var array = numbers.sort(function(a, b) {
+//     return a - b;
+//   });
+//   const smallest = array.slice(0, 2);
+//   return smallest;
+// }
+// // console.log(smallestTwo([0, 10, 2, 98, 56, 7, -1, -99]));
+
+// // 8) Write a function that takes in an array of numbers and returns a count of how many zeros are in the array.
+
+// // function zeroes(numbers) {
+// //   var zero = [];
+// //   numbers.forEach(function(number) {
+// //     if (number === 0) {
+// //       zero.push(number);
+// //     }
+// //   });
+// //   return zero.length;
+// // }
+// // console.log(zeroes([0, 1, 0, 2, 6, 6, 0, 12, 0, 0, 0, 0, 100, 20]));
+
+// // 9) Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
+
+function biggerThanTen(numbers) {
+  var bigger = [];
   numbers.forEach(function(number) {
-    reverseArray.unshift(number);
-    // i -= 1;
-  });
-  return reverseArray;
-}
-// console.log(reverse([1, 2, 3]));
-
-// 4) Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
-
-
-// 5) Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
-
-function combine(strings) {
-  var newString = "";
-  strings.forEach(function(string) {
-    newString = `${newString}${string}, `;
-  });
-  return newString;
-}
-// console.log(combine(["Hello", "Goodbye", "Where"]));
-// 6) Write a function that takes in an array of numbers and returns the product of all the numbers (each number multiplied by each other).
-
-function product(numbers) {
-  var product = 1;
-  numbers.forEach(function(number) {
-    product *= number;
-  });
-  return product;
-}
-// console.log(product([1, 2, 3, 4, 5]));
-
-// 7) Write a function that takes in an array of numbers and returns the two smallest numbers.
-// order the array of numbers
-// return the first two numbers!
-
-function smallestTwo(numbers) {
-  var array = numbers.sort(function(a, b) {
-    return a - b;
-  });
-  const smallest = array.slice(0, 2);
-  return smallest;
-}
-// console.log(smallestTwo([0, 10, 2, 98, 56, 7, -1, -99]));
-
-// 8) Write a function that takes in an array of numbers and returns a count of how many zeros are in the array.
-
-function zeroes(numbers) {
-  var zero = [];
-  numbers.forEach(function(number) {
-    if (number === 0) {
-      zero.push(number);
+    if (number > 10) {
+      bigger.push(number);
     }
   });
-  return zero.length;
+  return (bigger.length === numbers.length);
 }
-console.log(zeroes([0, 1, 0, 2, 6, 6, 0, 12, 0, 0, 0, 0, 100, 20]));
-// 9) Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
-
+console.log(biggerThanTen([11, 12, 98, 48, 15, 101]));
 
 // 10) Write a function that takes in an array of words and returns the number of times the letter “a” appeared in total.
