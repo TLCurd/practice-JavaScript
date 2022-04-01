@@ -269,7 +269,7 @@ function countA(words) {
   var count = 0;
   letters.forEach(function(letter) {
     if (letter.toLowerCase() === "a") {
-      count++
+      count++;
     }
   }); 
   return count;  
